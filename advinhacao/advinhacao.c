@@ -24,7 +24,7 @@ while(!ganhou) {
 
     if (acertou) {
         printf("Parabens! Voce acertou!\n");
-        ganhou = 1;
+        break;
     } else if(maior) {
         printf("seu chute foi maior do que o numero secreto!\n");
         } else {
