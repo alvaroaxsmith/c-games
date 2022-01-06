@@ -1,4 +1,5 @@
 #include <stdio.h>
+# define NUMERO_DE_TENTATIVAS 3
 
 int main() {
     printf("************************************\n");
@@ -7,9 +8,14 @@ int main() {
 
     int chute;
     int numerosecreto;
-for(int i=1;i<=3; i++) {
+for(int i=1;i<=NUMERO_DE_TENTATIVAS; i++) {
     printf("Qual e o seu %do. chute? ", i);
     scanf("%d", &chute);
+    if (chute < 0) {
+        printf("Voce nao pode chutar numeros negativos\n");
+        i--;
+        continue
+    }
     printf("Seu %do. chute foi: %d\n", i, chute);
 
     
