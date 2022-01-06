@@ -7,16 +7,17 @@ int main() {
 
     int chute;
     int numerosecreto;
-
-    printf("Qual e o seu chute? ");
+for(int i=1;i<=3; i++) {
+    printf("Qual e o seu %do. chute? ", i);
     scanf("%d", &chute);
-    printf("Seu chute foi: %d\n", chute);
+    printf("Seu %do. chute foi: %d\n", i, chute);
 
     
     int acertou = chute == numerosecreto;
 
     if (acertou) {
         printf("Parabens! Voce acertou!\n");
+        break;
     } else {
         int maior = chute > numerosecreto;
         if (maior) {
@@ -25,4 +26,6 @@ int main() {
             printf("Seu chute foi menor do que o numero secreto!\n");
         }
     }
+}
+printf("Obrigado por jogar!\n");
 }
