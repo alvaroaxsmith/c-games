@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #define NUMERO_DE_TENTATIVAS 3
 
 int main() {
@@ -21,13 +22,14 @@ int main() {
     int acertou;
     int nivel;
     int totaldetentativas;
+    int maximo;
+    int minimo;
  
     // definindo a quantidade de pontos inicial
     double pontos = 1000;
     
     // gerando um numero secreto aleatorio
-    srand(time(0));
-    int numerosecreto = rand() % 100;
+    int numerosecreto;
  
     // escolhendo o nivel de dificuldade
     printf("Qual o nivel de dificuldade?\n");
@@ -47,7 +49,16 @@ int main() {
             totaldetentativas = 6;
             break;
     }
- 
+    printf("Escolha um inteiro positivo qualquer para ser definido como maximo: ");
+    scanf("%d", &maximo);
+    printf("Escolha um inteiro positivo qualqu1er para ser definido como minimo: ");
+    scanf("%d", &minimo);
+
+        if (maximo<=minimo) {
+            printf("O valor maximo tem que ser maior que o valor minimo!");
+        } else if (numerosecreto = minimo + ( rand() % maximo )) {
+            printf("Advinhe o numero entre %d e %d\n", minimo, maximo);
+        }
     // loop principal do jogo
     for(int i = 1; i <= totaldetentativas; i++) {
  
