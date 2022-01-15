@@ -1,6 +1,6 @@
 # Estudos em C
  
-#### Neste projeto serão construído 3 grandes jogos com a linguagem C
+#### Neste projeto serão construídos 3 grandes jogos com a linguagem C
 - [x] [Jogo de Advinhação](https://github.com/alvaroaxsmith/c-games/tree/main/advinhacao)
 - [ ] Jogo da Forca
 - [ ] Pac-man
